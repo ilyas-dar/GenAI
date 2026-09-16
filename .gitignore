@@ -1,0 +1,24 @@
+# API Keys and Secrets (CRITICAL)
+.env
+*.env
+secrets/
+
+# Python Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+
+# Python cache and temporary files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# IDE / Editor configurations
+.vscode/
+.idea/
+.DS_Store
