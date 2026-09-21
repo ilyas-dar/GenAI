@@ -2,3 +2,7 @@ langchain
 langchain-mistralai
 python-dotenv
 langchain_huggingface
+
+transformers
+torch
+accelerate
