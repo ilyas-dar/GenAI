@@ -2,6 +2,7 @@ langchain
 langchain-mistralai
 python-dotenv
 langchain_huggingface
+sentence-transformers
 
 transformers
 torch

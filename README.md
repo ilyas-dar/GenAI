@@ -96,11 +96,13 @@ load_dotenv()
 * Model Downloading
 * Model Caching
 * Environment Variables
+* LangChain Chat Interfaces
+* Local vs Hosted LLMs
 
 ### Currently Learning
 
-* LangChain Chat Interfaces
-* Local vs Hosted LLMs
+* Embeddings
+* Chatbot
 
 ### Next Topics
 
@@ -108,7 +110,7 @@ load_dotenv()
 * ChatPromptTemplate
 * Output Parsers
 * Chains
-* Embeddings
+
 * Vector Databases
 * FAISS
 * Retrieval Augmented Generation (RAG)
