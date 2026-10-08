@@ -1,8 +1,8 @@
 # GenAI Learning Repository
 
-A personal repository where I document my journey of learning Generative AI, Large Language Models (LLMs), Hugging Face, and LangChain.
+A personal repository where I document my journey of learning Generative AI, Large Language Models (LLMs), Hugging Face, LangChain, and related tools.
 
-The goal of this repository is not to build a complete application, but to understand the fundamentals step by step and maintain code examples that I can revisit later.
+The goal of this repository is not to build production-ready applications, but to understand concepts step by step, experiment with different technologies, and maintain code examples that I can revisit later.
 
 ## Current Learning Focus
 
@@ -11,11 +11,10 @@ The goal of this repository is not to build a complete application, but to under
 * Running local LLMs
 * Understanding model downloads and caching
 * Learning LangChain fundamentals
-* Prompt Engineering
 * Prompt Templates
 * ChatPromptTemplate
-* Embeddings
-* Building simple chatbot applications
+* Prompt Engineering
+* Building simple Streamlit interfaces
 
 ## Project Structure
 
@@ -31,7 +30,8 @@ GenAI/
 ├── embeddingModels
 │   └── huggingFace.py
 ├── plotify_prompt_templates
-│   └── core.py
+│   ├── core.py
+│   └── coreUI.py
 ├── pyproject.toml
 ├── requirements.txt
 ├── src
@@ -49,7 +49,7 @@ Learned how to:
 
 * Connect LangChain with Hugging Face hosted models
 * Use API tokens securely with `.env`
-* Make requests using `ChatHuggingFace`
+* Make requests using LangChain integrations
 * Understand the difference between local and hosted inference
 
 ### Local Models with Hugging Face Pipeline
@@ -57,7 +57,7 @@ Learned how to:
 Learned how to:
 
 * Download models locally
-* Load models using `HuggingFacePipeline`
+* Load models using Hugging Face pipelines
 * Run inference without API costs
 * Understand Hugging Face model caching
 
@@ -99,38 +99,21 @@ load_dotenv()
 Learned how to:
 
 * Use LangChain chat model interfaces
-* Send prompts to different providers
-* Work with hosted and local models through a common API
+* Work with different model providers through a common API
+* Send prompts to hosted and local models
 * Build reusable LLM workflows
 
 ### Prompt Templates
 
 Learned how to:
 
-* Create reusable prompts using `PromptTemplate`
+* Create reusable prompts using `ChatPromptTemplate`
+* Separate system instructions from user input
 * Use variables inside prompts
-* Separate instructions from user input
-* Generate dynamic prompts from templates
+* Generate prompts dynamically
+* Build information extraction workflows
 
-Example concept:
-
-```python
-prompt = PromptTemplate(
-    input_variables=["topic"],
-    template="Explain {topic} in simple terms."
-)
-```
-
-### ChatPromptTemplate
-
-Learned how to:
-
-* Build chat-style prompts with system and user messages
-* Create reusable conversational templates
-* Inject user input dynamically
-* Structure prompts for chatbot and extraction tasks
-
-Example concept:
+Example:
 
 ```python
 prompt = ChatPromptTemplate.from_messages([
@@ -139,48 +122,70 @@ prompt = ChatPromptTemplate.from_messages([
 ])
 ```
 
-### Embeddings
+### Prompt Engineering
 
-Currently experimenting with:
+Practiced:
 
-* Text embeddings
-* Converting text into vector representations
-* Understanding similarity search foundations
-* Preparing for vector databases and RAG systems
+* Designing clear system instructions
+* Structuring output formats
+* Information extraction tasks
+* Content analysis workflows
+* Improving response consistency through prompt design
 
-### Mini Projects and Experiments
+### Streamlit Basics
 
-#### Chatbots
+Learned how to:
 
-Built simple chatbot examples to understand:
+* Create simple web interfaces for LLM applications
+* Accept user input through forms
+* Trigger model execution with buttons
+* Display model responses in a browser
+* Connect LangChain applications to a UI
 
-* User interaction loops
-* Prompt-response workflows
-* Chat model integration
-* Terminal-based chatbot interfaces
+## Mini Projects and Experiments
 
-#### Plotify Prompt Templates
+### Plotify Prompt Templates
 
-Experimenting with prompt templates through a fictional company scenario where stories and poems are analyzed to extract:
+A small prompt engineering project built while learning LangChain Prompt Templates.
 
-* Title
-* Genre
-* Summary
-* Theme
-* Tone
-* Mood
-* Keywords
-* Tags
+The project simulates a fictional company called **Plotify** that receives poems and short stories from users and analyzes them using an LLM.
 
-This project is used to understand prompt engineering and structured information extraction.
+Current features:
+
+* Title extraction
+* Type detection
+* Genre classification
+* Summary generation
+* Theme identification
+* Character extraction
+* Setting identification
+* Tone analysis
+* Mood analysis
+* Keyword extraction
+* Emotion detection
+* Tag generation
+
+Files:
+
+* `core.py` – Prompt template and LangChain workflow
+* `coreUI.py` – Streamlit interface
+
+### Chat Model Experiments
+
+Contains examples exploring:
+
+* Basic chat interactions
+* Hugging Face hosted models
+* Local model execution
+* Chatbot development concepts
 
 ## Learning Roadmap
 
 ### Completed
 
 * Chat Models
-* Hugging Face Endpoint
-* Hugging Face Pipeline
+* Hugging Face Endpoint Models
+* Hugging Face Pipelines
 * Local Model Execution
 * Model Downloading
 * Model Caching
@@ -192,22 +197,18 @@ This project is used to understand prompt engineering and structured information
 
 * Prompt Templates
 * ChatPromptTemplate
-* Basic Prompt Engineering
+* Prompt Engineering
+* Streamlit Integration
 
 ### Next Topics
 
 * Structured Outputs
-
-
-### Next Topics
-
+* Output Parsers
+* Embeddings
 * Chains
 * Vector Databases
 * FAISS
 * Retrieval Augmented Generation (RAG)
-* Document Loaders
-* Text Splitters
-* Retrieval Chains
 
 ## Resources
 
@@ -235,4 +236,4 @@ This repository is intentionally beginner-friendly.
 
 Code may change frequently as I learn new concepts, refactor examples, and experiment with different models and LangChain components.
 
-The focus is learning, understanding, and documenting progress rather than building a production-ready system.
+The focus is learning, understanding, and documenting progress rather than building production-ready systems.
