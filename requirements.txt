@@ -3,7 +3,7 @@ langchain-mistralai
 python-dotenv
 langchain_huggingface
 sentence-transformers
-
+streamlit
 transformers
 torch
 accelerate
