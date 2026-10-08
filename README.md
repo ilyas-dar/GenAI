@@ -11,7 +11,11 @@ The goal of this repository is not to build a complete application, but to under
 * Running local LLMs
 * Understanding model downloads and caching
 * Learning LangChain fundamentals
-* Experimenting with different model interfaces
+* Prompt Engineering
+* Prompt Templates
+* ChatPromptTemplate
+* Embeddings
+* Building simple chatbot applications
 
 ## Project Structure
 
@@ -19,10 +23,15 @@ The goal of this repository is not to build a complete application, but to under
 GenAI/
 ├── README.md
 ├── chatmodels
+│   ├── UI_chatbot.py
 │   ├── chat.py
+│   ├── chatbot.py
 │   ├── huggingface.py
 │   └── localmodel.py
 ├── embeddingModels
+│   └── huggingFace.py
+├── plotify_prompt_templates
+│   └── core.py
 ├── pyproject.toml
 ├── requirements.txt
 ├── src
@@ -85,6 +94,86 @@ import os
 load_dotenv()
 ```
 
+### LangChain Chat Models
+
+Learned how to:
+
+* Use LangChain chat model interfaces
+* Send prompts to different providers
+* Work with hosted and local models through a common API
+* Build reusable LLM workflows
+
+### Prompt Templates
+
+Learned how to:
+
+* Create reusable prompts using `PromptTemplate`
+* Use variables inside prompts
+* Separate instructions from user input
+* Generate dynamic prompts from templates
+
+Example concept:
+
+```python
+prompt = PromptTemplate(
+    input_variables=["topic"],
+    template="Explain {topic} in simple terms."
+)
+```
+
+### ChatPromptTemplate
+
+Learned how to:
+
+* Build chat-style prompts with system and user messages
+* Create reusable conversational templates
+* Inject user input dynamically
+* Structure prompts for chatbot and extraction tasks
+
+Example concept:
+
+```python
+prompt = ChatPromptTemplate.from_messages([
+    ("system", "You are a helpful assistant."),
+    ("user", "{input}")
+])
+```
+
+### Embeddings
+
+Currently experimenting with:
+
+* Text embeddings
+* Converting text into vector representations
+* Understanding similarity search foundations
+* Preparing for vector databases and RAG systems
+
+### Mini Projects and Experiments
+
+#### Chatbots
+
+Built simple chatbot examples to understand:
+
+* User interaction loops
+* Prompt-response workflows
+* Chat model integration
+* Terminal-based chatbot interfaces
+
+#### Plotify Prompt Templates
+
+Experimenting with prompt templates through a fictional company scenario where stories and poems are analyzed to extract:
+
+* Title
+* Genre
+* Summary
+* Theme
+* Tone
+* Mood
+* Keywords
+* Tags
+
+This project is used to understand prompt engineering and structured information extraction.
+
 ## Learning Roadmap
 
 ### Completed
@@ -98,22 +187,25 @@ load_dotenv()
 * Environment Variables
 * LangChain Chat Interfaces
 * Local vs Hosted LLMs
+* Prompt Templates
+* ChatPromptTemplate
+* Basic Prompt Engineering
 
 ### Currently Learning
 
 * Embeddings
-* Chatbot
+* Output Parsers
+* Chatbot Development
 
 ### Next Topics
 
-* Prompt Templates
-* ChatPromptTemplate
-* Output Parsers
 * Chains
-
 * Vector Databases
 * FAISS
 * Retrieval Augmented Generation (RAG)
+* Document Loaders
+* Text Splitters
+* Retrieval Chains
 
 ## Resources
 
@@ -121,19 +213,17 @@ load_dotenv()
 
 Official Documentation:
 
-[LangChain Documentation](https://python.langchain.com/docs/introduction/?utm_source=chatgpt.com)
+https://python.langchain.com/docs/introduction/
 
 Prompt Templates Reference:
 
-[LangChain PromptTemplate Reference](https://reference.langchain.com/python/langchain-core/prompts/prompt/PromptTemplate?utm_source=chatgpt.com)
-
-LangChain explains Prompt Templates as reusable templates that accept variables and generate prompts dynamically.
+https://reference.langchain.com/python/langchain-core/prompts/prompt/PromptTemplate
 
 ### Additional Learning Resource
 
 Microsoft's LangChain for Beginners:
 
-[LangChain for Beginners (Microsoft)](https://github.com/microsoft/langchain-for-beginners/blob/main/03-prompts-messages-outputs/README.md?utm_source=chatgpt.com)
+https://github.com/microsoft/langchain-for-beginners
 
 This resource covers chat models, prompt templates, structured outputs, chains, agents, and RAG systems.
 
