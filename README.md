@@ -187,15 +187,17 @@ This project is used to understand prompt engineering and structured information
 * Environment Variables
 * LangChain Chat Interfaces
 * Local vs Hosted LLMs
+
+### Currently Learning
+
 * Prompt Templates
 * ChatPromptTemplate
 * Basic Prompt Engineering
 
-### Currently Learning
+### Next Topics
 
-* Embeddings
-* Output Parsers
-* Chatbot Development
+* Structured Outputs
+
 
 ### Next Topics
 
